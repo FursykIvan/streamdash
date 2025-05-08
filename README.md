@@ -1,5 +1,6 @@
 StreamDash 🚀
-@voice_weather_bot
+
+[@voice_weather_bot](https://t.me/voice_weather_bot)
 
 StreamDash is a powerful real-time weather data platform designed to collect, process, and visualize live weather information. It integrates multiple technologies into a cohesive system that fetches data from external APIs, streams it through Kafka, processes it with FastAPI, stores it in PostgreSQL, and presents it on an interactive React dashboard.
 A Telegram bot with both text and voice support lets users access forecasts through a conversational interface, making the system easily accessible and engaging.
@@ -8,7 +9,7 @@ A Telegram bot with both text and voice support lets users access forecasts thro
 
 ### Telegram Bot
 Open Telegram and send a voice message to the bot:
-👉 @voice_weather_bot
+👉 [@voice_weather_bot](https://t.me/voice_weather_bot)
 
 Just say the name of a city or village in Ukraine (e.g. “Київ”, “Львів”, “Солотвин”), and you'll receive detailed weather information for that location.
 🎙️ Voice only – no typing required!
