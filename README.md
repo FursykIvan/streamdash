@@ -32,11 +32,17 @@ This project serves as both a practical tool and a showcase of real-time data en
 
 graph TD
     Producer -->|Weather data| Kafka
+    
     Kafka -->|Streams data| Backend
+    
     Backend -->|Stores| PostgreSQL
+    
     Backend -->|WebSocket| Frontend
+    
     TelegramBot -->|Voice/Text| Backend
+    
     Frontend -->|Dashboard UI| User
+    
     TelegramBot -->|User input| User
 
 ## 🧩 Components <a id="components"></a>
