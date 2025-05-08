@@ -1,5 +1,8 @@
-aiogram
 speechrecognition
 pydub
 kafka-python
 python-dotenv
+deepgram-sdk>= 3.0.0
+requests
+aiogram>=3.0.0
+aiohttp>=3.8.0

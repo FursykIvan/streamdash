@@ -1,4 +1,12 @@
-FROM ubuntu:latest
-LABEL authors="Devona"
+FROM node:18-slim
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /app
+
+COPY package.json .
+RUN npm install
+
+COPY src ./src
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
