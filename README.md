@@ -14,6 +14,9 @@ Open Telegram and send a voice message to the bot:
 Just say the name of a city or village in Ukraine (e.g. “Київ”, “Львів”, “Солотвин”), and you'll receive detailed weather information for that location (So ​​far only Ukrainian cities and villages).
 🎙️ Voice only – no typing required!
 
+![Telegram Bot Screenshot](https://github.com/FursykIvan/streamdash/blob/main/photo_2025-05-08_16-43-04.jpg?raw=true)
+
+
 ## 📋 Table of Contents
 - [Overview](#overview)
 - [Architecture](#architecture)
