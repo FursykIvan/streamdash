@@ -4,7 +4,7 @@ StreamDash 🚀
 StreamDash is a powerful real-time weather data platform designed to collect, process, and visualize live weather information. It integrates multiple technologies into a cohesive system that fetches data from external APIs, streams it through Kafka, processes it with FastAPI, stores it in PostgreSQL, and presents it on an interactive React dashboard.
 A Telegram bot with both text and voice support lets users access forecasts through a conversational interface, making the system easily accessible and engaging.
 
-## 🖥️ Usage
+## 🖥️ Usage <a id="usage"></a>
 
 ### Telegram Bot
 Open Telegram and send a voice message to the bot:
@@ -21,14 +21,13 @@ Just say the name of a city or village in Ukraine (e.g. “Київ”, “Ль�
 - [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
-- [License](#license)
 
-## 🔍 Overview
+## 🔍 Overview <a id="overview"></a>
 
 StreamDash demonstrates a complete real-time ETL pipeline built on a microservices architecture. Data is fetched from third-party weather APIs, streamed via Apache Kafka, processed by FastAPI services, and stored in PostgreSQL. Users receive live updates through a WebSocket-connected React dashboard and a voice-enabled Telegram bot.
 This project serves as both a practical tool and a showcase of real-time data engineering and user-friendly UI/UX integration.
 
-## 🏗️ Architecture
+## 🏗️ Architecture <a id="architecture"></a>
 
 graph TD
     Producer -->|Weather data| Kafka
@@ -39,7 +38,7 @@ graph TD
     Frontend -->|Dashboard UI| User
     TelegramBot -->|User input| User
 
-## 🧩 Components
+## 🧩 Components <a id="components"></a>
 
 ### Backend (FastAPI)
 - Consumes data from Kafka topics
@@ -70,7 +69,7 @@ graph TD
 - **PostgreSQL**: Persistent data storage
 - **Docker & Docker Compose**: Containerization and orchestration
 
-## 📦 Features
+## 📦 Features <a id="features"></a>
 
 - **Real-time Data Processing**: Stream processing with Apache Kafka
 - **Data Persistence**: PostgreSQL database storage
@@ -81,7 +80,7 @@ graph TD
 - **Containerized Deployment**: Fully dockerized environment
 - **Scalable Architecture**: Microservices-based design
 
-## 🚀 Installation
+## 🚀 Installation <a id="installation"></a>
 
 ### Prerequisites
 - Docker and Docker Compose
@@ -105,7 +104,7 @@ cd streamdash
 docker-compose up --build
 ```
 
-## 📁 Project Structure
+## 📁 Project Structure <a id="project-structure"></a>
 ```
 streamdash/
 ├── backend/               # FastAPI backend service
