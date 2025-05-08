@@ -1,6 +1,17 @@
-# StreamDash 🚀
+StreamDash 🚀
+@voice_weather_bot
 
-**StreamDash** is a comprehensive real-time data processing platform that collects weather data, processes it through a streaming pipeline, and visualizes it in a dynamic dashboard. The system also features a Telegram bot interface for user interaction and voice command processing.
+StreamDash is a powerful real-time weather data platform designed to collect, process, and visualize live weather information. It integrates multiple technologies into a cohesive system that fetches data from external APIs, streams it through Kafka, processes it with FastAPI, stores it in PostgreSQL, and presents it on an interactive React dashboard.
+A Telegram bot with both text and voice support lets users access forecasts through a conversational interface, making the system easily accessible and engaging.
+
+## 🖥️ Usage
+
+### Telegram Bot
+Open Telegram and send a voice message to the bot:
+👉 @voice_weather_bot
+
+Just say the name of a city or village in Ukraine (e.g. “Київ”, “Львів”, “Солотвин”), and you'll receive detailed weather information for that location.
+🎙️ Voice only – no typing required!
 
 ## 📋 Table of Contents
 - [Overview](#overview)
@@ -14,11 +25,19 @@
 
 ## 🔍 Overview
 
-StreamDash demonstrates a complete ETL (Extract, Transform, Load) pipeline using modern streaming technologies. It fetches weather data from external APIs, processes it through Apache Kafka, stores it in PostgreSQL, and delivers real-time updates to users via a React dashboard and Telegram bot.
+StreamDash demonstrates a complete real-time ETL pipeline built on a microservices architecture. Data is fetched from third-party weather APIs, streamed via Apache Kafka, processed by FastAPI services, and stored in PostgreSQL. Users receive live updates through a WebSocket-connected React dashboard and a voice-enabled Telegram bot.
+This project serves as both a practical tool and a showcase of real-time data engineering and user-friendly UI/UX integration.
 
 ## 🏗️ Architecture
 
-![StreamDash Architecture](https://mermaid.ink/img/pako:eNqFkk1rwzAMhv-K0GmD_QGDHQrtYYcNtl12CcGxmhjixJPtQCn97_OSpWtLGfOJ6NWjV5I9UmEVUkZLXTvTwBN4Z1pYGFfDGhqnPSyNdWBqWMEWvIXKGQcXsLZGOVhqVZHXDRRKO1J_gNqAUg5-jHawVtpT8QZKNcbBs9KNgfvxeAIPULZk4Ek1FdxNJlPYgW5JwKNqS7ibTmewBd2RgAdVl3A_m83hG3RLAu5VVcLDfL6AHeiOBNypsoTHxeIJvkB3JOBWlSU8LZdP8Am6JwE3qirhebV6gQ_QPQm4VmUJr-v1K7yDHkjAlapKeNtsXuAN9EgCLlVVwvt2-wZvoEcScKHKEj52uzd4BT2RgHNVlvC53-_hBfREAs5UWcLXfn-AF9ATCThVZQnfh8MRnkFPJOBElSX8HA5HeAI9k4BjVZbwezwe4RH0TAKOVFnC3_F4hAfQMwk4VGUJ_6fTCe5BzyTgQJUl_J9OJ7gDPZOAfVWW8H86neAW9EwC9lRZwmmaJrgBPZOAXVWWcJqmCa5BzyRgR5UlnKZpgivQMwnYVmUJp2ma4BL0TAK2VFnCaZomuAA9k4BNVZZwmqYJzkHPJGBDlSWcpmmCM9AzCVhXZQmnaZrgFPRMAv6psoTTNE1wAnomAX9UWcJpmib4BT2TgF9VlnCapgl-QM8k4IcqS_gHnNANrw?type=png)
+graph TD
+    Producer -->|Weather data| Kafka
+    Kafka -->|Streams data| Backend
+    Backend -->|Stores| PostgreSQL
+    Backend -->|WebSocket| Frontend
+    TelegramBot -->|Voice/Text| Backend
+    Frontend -->|Dashboard UI| User
+    TelegramBot -->|User input| User
 
 ## 🧩 Components
 
@@ -85,20 +104,6 @@ cd streamdash
 # Start the application
 docker-compose up --build
 ```
-
-## 🖥️ Usage
-
-### Dashboard
-Access the dashboard at `http://localhost:3000`
-
-### Kafka UI
-Monitor Kafka topics at `http://localhost:8080`
-
-### Backend API
-Access the FastAPI backend at `http://localhost:8000`
-
-### Telegram Bot
-Start a conversation with the bot using your Telegram client
 
 ## 📁 Project Structure
 ```
