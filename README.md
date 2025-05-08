@@ -1,18 +1,48 @@
-StreamDash 🚀
+StreamDash 🚀 [@voice_weather_bot](https://t.me/voice_weather_bot) (Voice Weather Assistant)
+Just speak - get instant weather! ☁️🎙️
 
-[@voice_weather_bot](https://t.me/voice_weather_bot)
+StreamDash is a powerful real-time weather platform that collects, processes and visualizes live weather data through an innovative voice-first interface. The system integrates cutting-edge technologies:
 
-StreamDash is a powerful real-time weather data platform designed to collect, process, and visualize live weather information. It integrates multiple technologies into a cohesive system that fetches data from external APIs, streams it through Kafka, processes it with FastAPI, stores it in PostgreSQL, and presents it on an interactive React dashboard.
-A Telegram bot with both text and voice support lets users access forecasts through a conversational interface, making the system easily accessible and engaging.
+Fetches data from weather APIs
 
-## 🖥️ Usage <a id="usage"></a>
+Streams through Kafka for real-time processing
 
-### Telegram Bot
-Open Telegram and send a voice message to the bot:
-👉 [@voice_weather_bot](https://t.me/voice_weather_bot)
+Handles requests via FastAPI backend
 
-Just say the name of a city or village in Ukraine (e.g. “Київ”, “Львів”, “Солотвин”), and you'll receive detailed weather information for that location.
-🎙️ Voice only – no typing required!
+Stores historical data in PostgreSQL
+
+Presents analytics on React dashboard
+
+Key Innovation: Our Telegram bot revolutionizes weather access through natural voice interaction - just speak a location name and get instant forecasts without typing!
+
+🖥️ Usage <a id="usage"></a>
+Voice Weather Assistant
+Open [@voice_weather_bot](https://t.me/voice_weather_bot) in Telegram
+
+Send voice message with city/village name (e.g. "Kyiv", "Lviv", "Solotvyno")
+(So ​​far only Ukrainian cities and villages)
+
+Get detailed weather report in 1-2 seconds:
+
+Current temperature and conditions
+
+Precipitation probability
+
+Wind speed and direction
+
+24-hour forecast
+
+How it works:
+
+🎙️ Voice processed by DeepGram
+
+📍 NLP extracts location from speech
+
+⚡ Real-time data fetched from weather APIs
+
+📊 Response formatted for easy understanding
+
+No typing needed - just speak naturally! Try it now: 👉 [@voice_weather_bot](https://t.me/voice_weather_bot)
 
 ## 📋 Table of Contents
 - [Overview](#overview)
